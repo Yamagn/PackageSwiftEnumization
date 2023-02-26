@@ -16,7 +16,10 @@ struct PackageSwiftEnumation: ParsableCommand {
             manifestPath += "/Package.swift"
             sourcesPath += "/Sources"
         }
-        let file = URL(fileURLWithPath: manifestPath)
+        guard FileManager.default.fileExists(atPath: manifestPath) else {
+            print("Package.swift dose not exist.")
+            return
+        }
         let modules = try FileManager.default.contentsOfDirectory(atPath: sourcesPath)
         let args = modules
             .filter { $0.first != "." }
