@@ -2,7 +2,7 @@ import ArgumentParser
 import Foundation
 
 @main
-struct PackageSwiftEnumation: ParsableCommand {
+struct PackageSwiftEnumization: ParsableCommand {
     @Argument(help: "Absolute Path of the directory containing Package.swift")
     var rootPath: String
 
@@ -27,8 +27,8 @@ struct PackageSwiftEnumation: ParsableCommand {
                 // keyの方のmoduleは変数名として正しくフォーマットする
                 "\(module)=\(module)"
             }.joined(separator: ",")
-        print("sourcery --sources \(manifestPath) --output \(manifestPath) --templates Sources/PackageSwiftEnumation/Templates/Enumation.stencil --args \(args)")
-        shell("sourcery", "--sources", manifestPath, "--output", manifestPath, "--templates", "Sources/PackageSwiftEnumation/Templates/Enumation.stencil", "--args", args)
+        print("sourcery --sources \(manifestPath) --output \(manifestPath) --templates Sources/PackageSwiftEnumization/Templates/Enumation.stencil --args \(args)")
+        shell("sourcery", "--sources", manifestPath, "--output", manifestPath, "--templates", "Sources/PackageSwiftEnumization/Templates/Enumization.stencil", "--args", args)
     }
 
     @discardableResult

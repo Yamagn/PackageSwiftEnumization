@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "PackageSwiftEnumation",
+    name: "PackageSwiftEnumization",
     products: [
         .executable(
             name: "pse",
-            targets: [Modules.packageSwiftEnumation.rawValue]
+            targets: [Modules.packageSwiftEnumization.rawValue]
         ),
     ],
     dependencies: [
@@ -15,7 +15,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: Modules.packageSwiftEnumation.rawValue,
+            name: Modules.packageSwiftEnumization.rawValue,
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
@@ -24,6 +24,6 @@ let package = Package(
 )
 // sourcery:inline:Modules.TemplateName
 enum Modules: String {
-    case packageSwiftEnumation = "PackageSwiftEnumation"
+    case packageSwiftEnumization = "PackageSwiftEnumization"
 }
 // sourcery:end
