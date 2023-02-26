@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .executable(
             name: "pse",
-            targets: ["PackageSwiftEnumation"]
+            targets: [Modules.packageSwiftEnumation.rawValue]
         ),
     ],
     dependencies: [
@@ -15,16 +15,15 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "PackageSwiftEnumation",
+            name: Modules.packageSwiftEnumation.rawValue,
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
     ]
 )
-
 // sourcery:inline:Modules.TemplateName
 enum Modules: String {
-    case packageSwiftEnumation = "PackageSwiftEnumatio"
+    case packageSwiftEnumation = "PackageSwiftEnumation"
 }
 // sourcery:end
