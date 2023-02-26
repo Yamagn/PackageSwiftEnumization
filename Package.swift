@@ -25,6 +25,6 @@ let package = Package(
 
 // sourcery:inline:Modules.TemplateName
 enum Modules: String {
-    case PackageSwiftEnumation = "PackageSwiftEnumatio"
+    case packageSwiftEnumation = "PackageSwiftEnumatio"
 }
 // sourcery:end
