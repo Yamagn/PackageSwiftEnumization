@@ -1,0 +1,7 @@
+// sourcery:inline:Modules.TemplateName
+enum Modules: String {
+    {% for key, value in argument %}
+    case {{ key }} = "{{ value }}"
+    {% endfor %}
+}
+// sourcery:end
